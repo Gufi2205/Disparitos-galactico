@@ -7,13 +7,50 @@
     <title>Juegito</title>
     <script src="phaser.js"></script>
     <script src="script.js"></script>
+    <style>
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .instructions {
+            background-color: #f0f0f0;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .instructions h2 {
+            margin-top: 0;
+            color: #333;
+        }
+
+        .instructions ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .instructions li {
+            margin: 10px 0;
+        }
+    </style>
 </head>
 
 <body>
-
-    <div id="bloque_juego"></div>
-
-
+    <div class="container">
+        <div class="instructions">
+            <h2>Controles del Juego</h2>
+            <ul>
+                <li>🖱️ Clic izquierdo: Disparar</li>
+                <li>⌨️ Tecla A: Mover a la izquierda</li>
+                <li>⌨️ Tecla D: Mover a la derecha</li>
+            </ul>
+        </div>
+        <div id="bloque_juego"></div>
+    </div>
 </body>
 
 </html>
