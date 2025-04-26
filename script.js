@@ -52,7 +52,11 @@ var estadoPrincipal = {
         
         // Configuración de sonido de fondo
         musicaFondo = juego.add.audio('musicaFondo', 1, true);
-        musicaFondo.play();
+        
+        // Agregar un listener para iniciar la música con la primera interacción
+        juego.input.onDown.addOnce(function() {
+            musicaFondo.play();
+        });
 
         // Configuración del sistema de disparos
         balas = juego.add.group();
